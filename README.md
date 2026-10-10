@@ -4,7 +4,7 @@
 
 <img width="955" height="600" alt="exo" src="https://github.com/user-attachments/assets/aa7efb99-0c50-4001-8c08-7ba06c1bb5f1" />
 
-
+---
 Rather than relying on 3D graphics, EXO-SCOPE builds tension through abstract data analysis, time-sensitive emergencies, and authentic sound design.
 
 ### 🚀 Key Features
