@@ -1,4 +1,8 @@
 # EXO-SCOPE 📡
+![Lazarus Supported](https://img.shields.io/badge/Lazarus-Supported-blue.svg)
+![FPC Supported](https://img.shields.io/badge/FPC-Supported-yellow.svg)
+![BGRABitmap](https://img.shields.io/badge/Dependency-BGRABitmap-brightgreen.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
 
 **EXO-SCOPE** is a highly immersive, retro-futuristic exoplanet exploration simulator. Acting as a deep-space telemetry operator, you are tasked with discovering habitable worlds, decoding mysterious alien transmissions, and surviving the perils of the cosmos—all through a Command Line Interface (CLI) and an atmospheric, data-driven HUD.
 
