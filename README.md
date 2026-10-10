@@ -34,3 +34,6 @@ If you find **Exoscope** helpful and want to support its ongoing development, co
 
 > **💡 Your support keeps the momentum going!**  
 > Every contribution directly fuels my passion, energy, and motivation to continuously build, maintain, and release even more useful open-source desktop applications for the developer community.
+
+## Download Binary Portable
+[Here](https://github.com/CodeInPas/Exoscope/releases/tag/Release01)
