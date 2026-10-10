@@ -6,7 +6,7 @@
 
 **EXO-SCOPE** is a highly immersive, retro-futuristic exoplanet exploration simulator. Acting as a deep-space telemetry operator, you are tasked with discovering habitable worlds, decoding mysterious alien transmissions, and surviving the perils of the cosmos—all through a Command Line Interface (CLI) and an atmospheric, data-driven HUD.
 
-<img width="955" height="600" alt="exo" src="https://github.com/user-attachments/assets/aa7efb99-0c50-4001-8c08-7ba06c1bb5f1" />
+<img width="955" height="580" alt="exo" src="https://github.com/user-attachments/assets/aa7efb99-0c50-4001-8c08-7ba06c1bb5f1" />
 
 ---
 Rather than relying on 3D graphics, EXO-SCOPE builds tension through abstract data analysis, time-sensitive emergencies, and authentic sound design.
