@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="12"/>
+    <PathDelim Value="\"/>
+    <General>
+      <SessionStorage Value="InProjectDir"/>
+      <Title Value="ExoScope"/>
+      <Scaled Value="True"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <XPManifest>
+        <DpiAware Value="True"/>
+      </XPManifest>
+      <Icon Value="0"/>
+    </General>
+    <BuildModes>
+      <Item Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+    <RunParams>
+      <FormatVersion Value="2"/>
+    </RunParams>
+    <RequiredPackages>
+      <Item>
+        <PackageName Value="tycontrols_dt"/>
+      </Item>
+      <Item>
+        <PackageName Value="tycontrols"/>
+      </Item>
+      <Item>
+        <PackageName Value="ExtraHighlighters_Dsgn"/>
+      </Item>
+      <Item>
+        <PackageName Value="ExtraHighlighters"/>
+      </Item>
+      <Item>
+        <PackageName Value="SkeuoSimControls"/>
+      </Item>
+      <Item>
+        <PackageName Value="twlazui_components"/>
+      </Item>
+      <Item>
+        <PackageName Value="braunui"/>
+      </Item>
+      <Item>
+        <PackageName Value="BGRABitmapPack"/>
+      </Item>
+      <Item>
+        <PackageName Value="TAChartLazarusPkg"/>
+      </Item>
+      <Item>
+        <PackageName Value="SQLDBLaz"/>
+      </Item>
+      <Item>
+        <PackageName Value="LCL"/>
+      </Item>
+    </RequiredPackages>
+    <Units>
+      <Unit>
+        <Filename Value="ExoScopeOps.lpr"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="core\uBackgroundWorkerThread.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="core\uCommandLexer.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="core\uCoreSimulationEngine.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="models\uCatalogDatabaseManager.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ui\renderers\uGlassmorphismCache.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ui\frames\fraControlDock.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameControlDock"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ui\renderers\uViewDashboardRenderer.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ui\frames\fraVectorVisualizer.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameVectorVisualizer"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ui\frames\fraTerminalPanel.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameTerminal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ui\frames\fraSpectrumChart.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameSpectrum"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ui\frames\fraLightCurveChart.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameLightCurve"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit>
+      <Unit>
+        <Filename Value="utils\uDigitalSignalProcessing.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="utils\uKeplerPhysics.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="models\uTelemetryDataModel.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="models\ugalaxymapmodel.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uGalaxyMapModel"/>
+      </Unit>
+      <Unit>
+        <Filename Value="models\frastarmap.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameStarmap"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <UnitName Value="fraStarmap"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ui\fmaindashboard.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="MainDashboard"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="fMainDashboard"/>
+      </Unit>
+      <Unit>
+        <Filename Value="core\uaudiosynthesizer.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uAudioSynthesizer"/>
+      </Unit>
+      <Unit>
+        <Filename Value="models\usurfaceproberenderer.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uSurfaceProbeRenderer"/>
+      </Unit>
+      <Unit>
+        <Filename Value="models\ureportexporter.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uReportExporter"/>
+      </Unit>
+      <Unit>
+        <Filename Value="core\bass.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="BASS"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ui\unitabout.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ui\unitabout.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormAbout"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UnitAbout"/>
+      </Unit>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="bin\exoscope_ops"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="core;models;utils;ui;ui\frames;ui\renderers"/>
+      <UnitOutputDirectory Value="..\lib\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <CodeGeneration>
+      <TargetCPU Value="i386"/>
+      <TargetOS Value="win32"/>
+    </CodeGeneration>
+    <Linking>
+      <Debugging>
+        <GenerateDebugInfo Value="False"/>
+        <RunWithoutDebug Value="True"/>
+        <DebugInfoType Value="dsDwarf3"/>
+        <StripSymbols Value="True"/>
+      </Debugging>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+  </CompilerOptions>
+</CONFIG>

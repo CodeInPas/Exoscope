@@ -1,0 +1,64 @@
+object FrameSpectrum: TFrameSpectrum
+  Left = 0
+  Height = 300
+  Top = 0
+  Width = 600
+  ClientHeight = 300
+  ClientWidth = 600
+  TabOrder = 0
+  DesignLeft = 400
+  DesignTop = 200
+  object pnlBackground: TPanel
+    Left = 0
+    Height = 300
+    Top = 0
+    Width = 600
+    Align = alClient
+    BevelOuter = bvNone
+    ClientHeight = 300
+    ClientWidth = 600
+    Color = $0017110D
+    ParentColor = False
+    TabOrder = 0
+    object chrtSpectrum: TChart
+      Left = 8
+      Height = 284
+      Top = 8
+      Width = 584
+      AxisList = <
+        item
+          Grid.Color = $00332222
+          Grid.Style = psSolid
+          Marks.LabelFont.Color = clSilver
+          Marks.LabelFont.Name = 'Consolas'
+          Minors = <>
+          Title.LabelFont.Color = clSkyBlue
+          Title.LabelFont.Name = 'Consolas'
+          Title.Caption = 'Relative Flux'
+        end
+        item
+          Alignment = calBottom
+          Grid.Color = $00332222
+          Grid.Style = psSolid
+          Marks.LabelFont.Color = clSilver
+          Marks.LabelFont.Name = 'Consolas'
+          Minors = <>
+          Title.LabelFont.Color = clSkyBlue
+          Title.LabelFont.Name = 'Consolas'
+          Title.Caption = 'Spectral Wavelength (nm)'
+        end>
+      BackColor = $0017110D
+      BorderSpacing.Around = 8
+      Title.Visible = False
+      Align = alClient
+      Color = $0017110D
+      object serSpectrum: TLineSeries
+        LinePen.Color = $00FFCC00
+        LinePen.Width = 2
+        Pointer.Visible = False
+        ShowPoints = False
+      end
+    end
+  end
+end
+

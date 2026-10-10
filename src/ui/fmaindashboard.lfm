@@ -1,0 +1,644 @@
+object MainDashboard: TMainDashboard
+  Left = 172
+  Height = 720
+  Top = 100
+  Width = 1386
+  Caption = 'EXOSCOPE v.0.1'
+  ClientHeight = 720
+  ClientWidth = 1370
+  Color = 1511693
+  Menu = MainMenu1
+  Position = poScreenCenter
+  LCLVersion = '4.8.0.0'
+  WindowState = wsMaximized
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  object pnlTopBar: TPanel
+    Left = 0
+    Height = 35
+    Top = 0
+    Width = 1370
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 35
+    ClientWidth = 1370
+    Color = 4535849
+    ParentBackground = False
+    ParentColor = False
+    TabOrder = 0
+    object lblFunding: TLabel
+      Left = 7
+      Height = 21
+      Top = 7
+      Width = 180
+      Align = alLeft
+      BorderSpacing.Around = 7
+      Caption = 'RESEARCH FUNDING: $0'
+      Font.Color = clAqua
+      Font.Height = -16
+      Font.Name = 'Consolas'
+      ParentFont = False
+    end
+    object lblPoints: TLabel
+      Left = 250
+      Height = 21
+      Top = 7
+      Width = 171
+      Align = alLeft
+      BorderSpacing.Left = 56
+      BorderSpacing.Around = 7
+      Caption = 'DISCOVERY POINTS: 0'
+      Font.Color = 11206570
+      Font.Height = -16
+      Font.Name = 'Consolas'
+      ParentFont = False
+    end
+    object lblAlerts: TLabel
+      Left = 1176
+      Height = 22
+      Top = 8
+      Width = 189
+      Align = alRight
+      BorderSpacing.Top = 3
+      BorderSpacing.Around = 5
+      Caption = 'ALERTS: SYSTEM ONLINE'
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Consolas'
+      ParentFont = False
+    end
+  end
+  object pnlTerminal: TPanel
+    Left = 970
+    Height = 685
+    Top = 35
+    Width = 400
+    Align = alRight
+    BevelOuter = bvNone
+    ClientHeight = 685
+    ClientWidth = 400
+    ParentBackground = False
+    TabOrder = 1
+    inline FrameTerminal1: TFrameTerminal
+      Height = 685
+      Width = 400
+      Align = alClient
+      ClientHeight = 685
+      ClientWidth = 400
+      ParentBackground = False
+      inherited pnlBackground: TPanel
+        Height = 685
+        Width = 400
+        ClientHeight = 685
+        ClientWidth = 400
+        Color = clBlack
+        inherited memLog: TMemo
+          Left = 12
+          Height = 633
+          Top = 12
+          Width = 376
+          BorderSpacing.Around = 12
+          Color = clBlack
+          ScrollBars = ssNone
+        end
+        inherited pnlInput: TPanel
+          Top = 657
+          Width = 384
+          ClientWidth = 384
+          inherited lblPrompt: TLabel
+            Width = 133
+          end
+          inherited edtCommand: TEdit
+            Left = 133
+            Height = 16
+            Top = 4
+            Width = 251
+            BorderSpacing.Top = 4
+          end
+        end
+      end
+    end
+  end
+  object pnlRight: TPanel
+    Left = 0
+    Height = 685
+    Top = 35
+    Width = 970
+    Align = alClient
+    BevelOuter = bvNone
+    ClientHeight = 685
+    ClientWidth = 970
+    ParentBackground = False
+    TabOrder = 2
+    object pnlRightTop: TPanel
+      Left = 0
+      Height = 455
+      Top = 0
+      Width = 970
+      Align = alClient
+      BevelOuter = bvNone
+      ClientHeight = 455
+      ClientWidth = 970
+      ParentBackground = False
+      TabOrder = 0
+      object pnlCharts: TPanel
+        Left = 0
+        Height = 455
+        Top = 0
+        Width = 970
+        Align = alClient
+        BevelOuter = bvNone
+        ClientHeight = 455
+        ClientWidth = 970
+        ParentBackground = False
+        TabOrder = 0
+        inline FrameStarmap1: TFrameStarmap
+          Height = 105
+          Top = 350
+          Width = 970
+          Align = alClient
+          ClientHeight = 105
+          ClientWidth = 970
+          TabOrder = 2
+          Visible = False
+          inherited pnlBackground: TPanel
+            Height = 105
+            Width = 970
+            ClientHeight = 105
+            ClientWidth = 970
+            inherited lblTitle: TLabel
+              Width = 189
+            end
+            inherited shpDivider: TShape
+              Width = 938
+            end
+            inherited pbStarmap: TPaintBox
+              Height = 41
+              Width = 938
+            end
+          end
+        end
+        inline FrameLightCurve1: TFrameLightCurve
+          Height = 350
+          Width = 970
+          Align = alTop
+          ClientHeight = 350
+          ClientWidth = 970
+          Color = clBlack
+          ParentBackground = False
+          ParentColor = False
+          TabOrder = 1
+          inherited pnlBackground: TPanel
+            Height = 350
+            Width = 970
+            ClientHeight = 350
+            ClientWidth = 970
+            inherited lblTitle: TLabel
+              Height = 19
+              Width = 180
+            end
+            inherited chrtLightCurve: TChart
+              Height = 334
+              Width = 954
+            end
+          end
+        end
+        inline FrameSpectrum1: TFrameSpectrum
+          Height = 105
+          Top = 350
+          Width = 970
+          Align = alClient
+          ClientHeight = 105
+          ClientWidth = 970
+          ParentBackground = False
+          inherited pnlBackground: TPanel
+            Height = 105
+            Width = 970
+            ClientHeight = 105
+            ClientWidth = 970
+            inherited chrtSpectrum: TChart
+              Height = 89
+              Width = 954
+            end
+          end
+        end
+      end
+    end
+    object pnlControlDock: TPanel
+      Left = 0
+      Height = 230
+      Top = 455
+      Width = 970
+      Align = alBottom
+      BevelOuter = bvNone
+      ClientHeight = 230
+      ClientWidth = 970
+      Color = 1513216
+      ParentBackground = False
+      ParentColor = False
+      TabOrder = 1
+      object lblCtrlTitle: TLabel
+        Left = 7
+        Height = 19
+        Top = 7
+        Width = 956
+        Align = alTop
+        Alignment = taCenter
+        BorderSpacing.Around = 7
+        Caption = 'CONTROL DOCK && PARAMETERS'
+        Color = 6714938
+        Font.Color = clSkyBlue
+        Font.Height = -16
+        Font.Name = 'Consolas'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object shpCtrlDivider: TShape
+        Left = 0
+        Height = 1
+        Top = 33
+        Width = 970
+        Align = alTop
+        Pen.Color = 4206624
+      end
+      object pnlLeftCtrl: TPanel
+        Left = 0
+        Height = 196
+        Top = 34
+        Width = 240
+        Align = alLeft
+        BevelColor = 4206624
+        BevelOuter = bvNone
+        ClientHeight = 196
+        ClientWidth = 240
+        Color = clBlack
+        ParentBackground = False
+        ParentColor = False
+        TabOrder = 0
+        object lblFilterMode: TLabel
+          Left = 3
+          Height = 14
+          Top = 3
+          Width = 234
+          Align = alTop
+          Alignment = taCenter
+          BorderSpacing.Bottom = 12
+          BorderSpacing.Around = 3
+          Caption = 'FILTER TYPE'
+          Font.Color = clAqua
+          Font.Name = 'Consolas'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object cbFilterMode: TComboBox
+          Left = 5
+          Height = 22
+          Top = 32
+          Width = 230
+          Align = alTop
+          BorderSpacing.Around = 5
+          Color = 2365969
+          Font.Color = clSkyBlue
+          Font.Name = 'Consolas'
+          ItemHeight = 14
+          ItemIndex = 0
+          Items.Strings = (
+            'GAUSSIAN'
+            'MOVING AVERAGE'
+          )
+          ParentFont = False
+          Style = csDropDownList
+          TabOrder = 0
+          Text = 'GAUSSIAN'
+        end
+        object lblBandwidth: TLabel
+          Left = 5
+          Height = 14
+          Top = 82
+          Width = 230
+          Align = alTop
+          Alignment = taCenter
+          BorderSpacing.Top = 23
+          BorderSpacing.Around = 5
+          Caption = 'BANDWIDTH'
+          Font.Color = clYellow
+          Font.Name = 'Consolas'
+          ParentFont = False
+        end
+        object lblBandwidthVal: TLabel
+          Left = 0
+          Height = 15
+          Top = 134
+          Width = 240
+          Align = alTop
+          Alignment = taCenter
+          AutoSize = False
+          Caption = '400 nm'
+          Font.Color = clAqua
+          Font.Name = 'Consolas'
+          ParentFont = False
+        end
+        object btnApplyFilterClick: TTwLazUIButton
+          Left = 3
+          Height = 40
+          Top = 153
+          Width = 234
+          Align = alBottom
+          BorderSpacing.Around = 3
+          Caption = 'Apply Filter'
+          Font.Height = -17
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
+          TabOrder = 1
+          RoundedStyle = twRoundedNone
+          OnClick = cClick
+        end
+        object tbBandwidth: TTwLazUITrackBar
+          Left = 5
+          Height = 28
+          Top = 101
+          Width = 230
+          Align = alTop
+          BorderSpacing.Around = 5
+          Min = 100
+          Max = 1000
+          Position = 400
+          ThemeColor = twSuccess
+          TrackSize = twSizeLG
+          OnChange = tbBandwidthChange
+        end
+      end
+      object pnlRightCtrl: TPanel
+        Left = 730
+        Height = 196
+        Top = 34
+        Width = 240
+        Align = alRight
+        BevelColor = 4206624
+        BevelOuter = bvNone
+        ClientHeight = 196
+        ClientWidth = 240
+        Color = clBlack
+        ParentBackground = False
+        ParentColor = False
+        TabOrder = 1
+        object lblNoiseGate: TLabel
+          Left = 3
+          Height = 15
+          Top = 3
+          Width = 234
+          Align = alTop
+          Alignment = taCenter
+          BorderSpacing.Bottom = 12
+          BorderSpacing.Around = 3
+          Caption = 'NOISE GATE'
+          Color = clMoneyGreen
+          Font.Color = clAqua
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object lblNoiseGateVal: TLabel
+          Left = 2
+          Height = 15
+          Top = 65
+          Width = 236
+          Align = alTop
+          Alignment = taCenter
+          AutoSize = False
+          BorderSpacing.Around = 2
+          Caption = '25 %'
+          Font.Color = clAqua
+          Font.Name = 'Consolas'
+          ParentFont = False
+        end
+        object lblThreshold: TLabel
+          Left = 2
+          Height = 14
+          Top = 82
+          Width = 236
+          Align = alTop
+          Alignment = taCenter
+          BorderSpacing.Around = 2
+          Caption = 'THRESHOLD'
+          Color = clWhite
+          Font.Color = clYellow
+          Font.Name = 'Consolas'
+          ParentColor = False
+          ParentFont = False
+        end
+        object lblThresholdVal: TLabel
+          Left = 2
+          Height = 15
+          Top = 134
+          Width = 236
+          Align = alTop
+          Alignment = taCenter
+          AutoSize = False
+          BorderSpacing.Around = 2
+          Caption = '0.50'
+          Font.Color = clAqua
+          Font.Name = 'Consolas'
+          ParentFont = False
+        end
+        object btnReportDiscovery: TTwLazUIButton
+          Left = 3
+          Height = 40
+          Top = 153
+          Width = 234
+          Align = alBottom
+          BorderSpacing.Around = 3
+          Caption = 'Report'
+          Font.Height = -17
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
+          TabOrder = 0
+          ThemeColor = twSuccess
+          RoundedStyle = twRoundedNone
+          OnClick = btnReportDiscoveryClick
+        end
+        object tbThreshold: TTwLazUITrackBar
+          Left = 5
+          Height = 28
+          Top = 101
+          Width = 230
+          Align = alTop
+          BorderSpacing.Around = 5
+          Min = 1
+          Position = 50
+          ThemeColor = twDanger
+          TrackSize = twSizeLG
+          OnChange = tbThresholdChange
+        end
+        object tbNoiseGate: TTwLazUITrackBar
+          Left = 4
+          Height = 28
+          Top = 33
+          Width = 232
+          Align = alTop
+          BorderSpacing.Around = 4
+          ParentShowHint = False
+          ShowHint = True
+          Position = 25
+          ThemeColor = twInfo
+          TrackSize = twSizeLG
+          OnChange = tbNoiseGateChange
+        end
+      end
+      object pnlVector: TPanel
+        Left = 244
+        Height = 188
+        Top = 38
+        Width = 482
+        Align = alClient
+        BorderSpacing.Around = 4
+        BevelOuter = bvNone
+        ClientHeight = 188
+        ClientWidth = 482
+        Color = 5198647
+        ParentBackground = False
+        ParentColor = False
+        TabOrder = 2
+        inline FrameVectorVisualizer1: TFrameVectorVisualizer
+          Left = 4
+          Height = 180
+          Top = 4
+          Width = 474
+          Align = alClient
+          BorderSpacing.Around = 4
+          ClientHeight = 180
+          ClientWidth = 474
+          ParentBackground = False
+          inherited pnlBackground: TPanel
+            Height = 180
+            Width = 474
+            ClientHeight = 180
+            ClientWidth = 474
+            inherited pbVectorCanvas: TPaintBox
+              Height = 164
+              Width = 458
+            end
+          end
+        end
+      end
+    end
+  end
+  object tmrAnimation1: TTimer
+    Enabled = False
+    Interval = 33
+    OnTimer = tmrAnimationTimer
+    Left = 184
+    Top = 136
+  end
+  object SynGalaxySyn1: TSynGalaxySyn
+    Enabled = False
+    KeyWords.Strings = (
+      '#END'
+      '#GALAXY'
+      'A'
+      'ANONYMOUS'
+      'AUTOUNLOAD'
+      'B'
+      'BATTLEPROTOCOL'
+      'C'
+      'CAP'
+      'CARGO'
+      'COL'
+      'COMPRESS'
+      'D'
+      'DRIVE'
+      'E'
+      'EMP'
+      'F'
+      'FLEET'
+      'FLEETTABLES'
+      'G'
+      'GALAXYTV'
+      'GPLUS'
+      'GROUPFORECAST'
+      'H'
+      'I'
+      'J'
+      'L'
+      'M'
+      'MACHINEREPORT'
+      'MAT'
+      'N'
+      'NAMECASE'
+      'NO'
+      'O'
+      'OPTIONS'
+      'P'
+      'PLANETFORECAST'
+      'PRODTABLE'
+      'PRODUCE'
+      'Q'
+      'R'
+      'ROUTESFORECAST'
+      'S'
+      'SEND'
+      'SHIELDS'
+      'SHIPTYPEFORECAST'
+      'SORTGROUPS'
+      'T'
+      'TWOCOL'
+      'U'
+      'UNDERSCORES'
+      'V'
+      'W'
+      'WAR'
+      'WEAPONS'
+      'X'
+      'Y'
+      'Z'
+    )
+    Left = 376
+    Top = 392
+  end
+  object tmrAnimation: TTimer
+    Enabled = False
+    Interval = 33
+    OnTimer = tmrAnimationTimer
+    Left = 184
+    Top = 136
+  end
+  object tmrAnimation2: TTimer
+    Enabled = False
+    Interval = 33
+    OnTimer = tmrAnimationTimer
+    Left = 184
+    Top = 136
+  end
+  object MainMenu1: TMainMenu
+    Left = 184
+    Top = 176
+    object MenuItem1: TMenuItem
+      Caption = 'Application'
+      object mnExit: TMenuItem
+        Caption = 'Exit'
+        OnClick = mnExitClick
+      end
+    end
+    object MenuItem2: TMenuItem
+      Caption = 'Help'
+      object mnTutorial: TMenuItem
+        Caption = 'Tutorial'
+        object mnTutorialID: TMenuItem
+          Caption = 'Bahasa Indonesia'
+          OnClick = mnTutorialIDClick
+        end
+        object mnTutorialEN: TMenuItem
+          Caption = 'English'
+          OnClick = mnTutorialENClick
+        end
+      end
+      object mnAbout: TMenuItem
+        Caption = 'About'
+        OnClick = mnAboutClick
+      end
+    end
+  end
+end

@@ -1,0 +1,220 @@
+object FrameControlDock: TFrameControlDock
+  Left = 0
+  Height = 436
+  Top = 0
+  Width = 400
+  ClientHeight = 436
+  ClientWidth = 400
+  Color = $00241A11
+  ParentColor = False
+  TabOrder = 0
+  DesignLeft = 400
+  DesignTop = 200
+  object lblTitle: TLabel
+    Left = 16
+    Height = 19
+    Top = 16
+    Width = 234
+    Caption = 'CONTROL DOCK & PARAMETERS'
+    Font.Color = clSilver
+    Font.Name = 'Consolas'
+    Font.Size = 12
+    ParentFont = False
+  end
+  object shpDivider: TShape
+    Left = 16
+    Height = 1
+    Top = 42
+    Width = 368
+    Pen.Color = $00403020
+  end
+  object pnlLeft: TPanel
+    Left = 16
+    Height = 280
+    Top = 56
+    Width = 176
+    BevelColor = $00403020
+    BevelOuter = bvLowered
+    Color = $001A120A
+    ParentColor = False
+    TabOrder = 0
+    object lblFilterMode: TLabel
+      Left = 12
+      Height = 15
+      Top = 12
+      Width = 84
+      Caption = 'FILTER TYPE'
+      Font.Color = $00A0A0A0
+      Font.Name = 'Consolas'
+      ParentFont = False
+    end
+    object cbFilterMode: TComboBox
+      Left = 12
+      Height = 23
+      Top = 32
+      Width = 150
+      Color = $00241A11
+      Font.Color = clSkyBlue
+      Font.Name = 'Consolas'
+      ItemHeight = 15
+      ItemIndex = 0
+      Items.Strings = (
+        'GAUSSIAN'
+        'MOVING AVERAGE'
+      )
+      ParentFont = False
+      Style = csDropDownList
+      TabOrder = 0
+      Text = 'GAUSSIAN'
+    end
+    object lblBandwidth: TLabel
+      Left = 12
+      Height = 15
+      Top = 120
+      Width = 63
+      Caption = 'BANDWIDTH'
+      Font.Color = $00A0A0A0
+      Font.Name = 'Consolas'
+      ParentFont = False
+    end
+    object lblBandwidthVal: TLabel
+      Left = 110
+      Height = 15
+      Top = 120
+      Width = 52
+      Alignment = taRightJustify
+      AutoSize = False
+      Caption = '400 nm'
+      Font.Color = clAqua
+      Font.Name = 'Consolas'
+      ParentFont = False
+    end
+    object tbBandwidth: TTrackBar
+      Left = 12
+      Height = 30
+      Top = 140
+      Width = 150
+      Max = 1000
+      Min = 100
+      Position = 400
+      TickStyle = tsNone
+      OnChange = tbBandwidthChange
+      TabOrder = 1
+    end
+    object chkDataStacking: TCheckBox
+      Left = 12
+      Height = 19
+      Top = 240
+      Width = 114
+      Caption = 'DATA STACKING'
+      Font.Color = clSilver
+      Font.Name = 'Consolas'
+      ParentFont = False
+      TabOrder = 2
+    end
+  end
+  object pnlRight: TPanel
+    Left = 208
+    Height = 280
+    Top = 56
+    Width = 176
+    BevelColor = $00403020
+    BevelOuter = bvLowered
+    Color = $001A120A
+    ParentColor = False
+    TabOrder = 1
+    object lblNoiseGate: TLabel
+      Left = 12
+      Height = 15
+      Top = 12
+      Width = 70
+      Caption = 'NOISE GATE'
+      Font.Color = $00A0A0A0
+      Font.Name = 'Consolas'
+      ParentFont = False
+    end
+    object lblNoiseGateVal: TLabel
+      Left = 110
+      Height = 15
+      Top = 12
+      Width = 52
+      Alignment = taRightJustify
+      AutoSize = False
+      Caption = '0 %'
+      Font.Color = clAqua
+      Font.Name = 'Consolas'
+      ParentFont = False
+    end
+    object tbNoiseGate: TTrackBar
+      Left = 12
+      Height = 30
+      Top = 32
+      Width = 150
+      Max = 100
+      Position = 25
+      TickStyle = tsNone
+      OnChange = tbNoiseGateChange
+      TabOrder = 0
+    end
+    object lblThreshold: TLabel
+      Left = 12
+      Height = 15
+      Top = 120
+      Width = 63
+      Caption = 'THRESHOLD'
+      Font.Color = $00A0A0A0
+      Font.Name = 'Consolas'
+      ParentFont = False
+    end
+    object lblThresholdVal: TLabel
+      Left = 110
+      Height = 15
+      Top = 120
+      Width = 52
+      Alignment = taRightJustify
+      AutoSize = False
+      Caption = '0.50'
+      Font.Color = clAqua
+      Font.Name = 'Consolas'
+      ParentFont = False
+    end
+    object tbThreshold: TTrackBar
+      Left = 12
+      Height = 30
+      Top = 140
+      Width = 150
+      Max = 100
+      Min = 1
+      Position = 50
+      TickStyle = tsNone
+      OnChange = tbThresholdChange
+      TabOrder = 1
+    end
+  end
+  object btnApplyFilter: TButton
+    Left = 16
+    Height = 35
+    Top = 360
+    Width = 176
+    Caption = 'APPLY FILTER'
+    Font.Color = clBlack
+    Font.Name = 'Consolas'
+    Font.Style = [fsBold]
+    OnClick = btnApplyFilterClick
+    ParentFont = False
+    TabOrder = 2
+  end
+  object btnReportDiscovery: TButton
+    Left = 208
+    Height = 35
+    Top = 360
+    Width = 176
+    Caption = 'REPORT DISCOVERY'
+    Font.Color = $0000A5FF
+    Font.Name = 'Consolas'
+    Font.Style = [fsBold]
+    OnClick = btnReportDiscoveryClick
+    ParentFont = False
+    TabOrder = 3
+  end
+end

@@ -1,0 +1,88 @@
+object FrameLightCurve: TFrameLightCurve
+  Left = 0
+  Height = 400
+  Top = 0
+  Width = 768
+  ClientHeight = 400
+  ClientWidth = 768
+  LCLVersion = '4.8.0.0'
+  TabOrder = 0
+  DesignLeft = 400
+  DesignTop = 200
+  object pnlBackground: TPanel
+    Left = 0
+    Height = 400
+    Top = 0
+    Width = 768
+    Align = alClient
+    BevelOuter = bvNone
+    ClientHeight = 400
+    ClientWidth = 768
+    Color = 2365969
+    ParentBackground = False
+    ParentColor = False
+    TabOrder = 0
+    object lblTitle: TLabel
+      Left = 16
+      Height = 20
+      Top = 16
+      Width = 200
+      Caption = 'LIGHT CURVE ANALYSIS'
+      Font.Color = clSilver
+      Font.Height = -16
+      Font.Name = 'Consolas'
+      ParentFont = False
+    end
+    object chrtLightCurve: TChart
+      Left = 16
+      Height = 330
+      Top = 50
+      Width = 736
+      AxisList = <      
+        item
+          Grid.Visible = False
+          Marks.LabelFont.Color = clSilver
+          Marks.LabelFont.Name = 'Consolas'
+          Marks.LabelBrush.Style = bsClear
+          Minors = <>
+          Title.LabelFont.Color = 10526880
+          Title.LabelFont.Name = 'Consolas'
+          Title.LabelFont.Orientation = 900
+          Title.Visible = True
+          Title.Caption = 'Relative Flux'
+          Title.LabelBrush.Style = bsClear
+        end      
+        item
+          Grid.Visible = False
+          Alignment = calBottom
+          Marks.LabelFont.Color = clSilver
+          Marks.LabelFont.Name = 'Consolas'
+          Marks.LabelBrush.Style = bsClear
+          Minors = <>
+          Title.LabelFont.Color = 10526880
+          Title.LabelFont.Name = 'Consolas'
+          Title.Visible = True
+          Title.Caption = 'Orbit Phase'
+          Title.LabelBrush.Style = bsClear
+        end>
+      BackColor = 1708554
+      Title.Text.Strings = (
+        'TAChart'
+      )
+      Align = alCustom
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      Color = 2365969
+      object serRawFlux: TLineSeries
+        LineType = ltNone
+        Pointer.Pen.Visible = False
+        Pointer.Style = psCircle
+        Pointer.Visible = True
+        ShowPoints = True
+      end
+      object serFlux: TLineSeries
+        LinePen.Color = clAqua
+        LinePen.Width = 3
+      end
+    end
+  end
+end

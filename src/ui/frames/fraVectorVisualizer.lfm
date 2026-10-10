@@ -1,0 +1,42 @@
+object FrameVectorVisualizer: TFrameVectorVisualizer
+  Left = 0
+  Height = 300
+  Top = 0
+  Width = 400
+  ClientHeight = 300
+  ClientWidth = 400
+  LCLVersion = '4.8.0.0'
+  TabOrder = 0
+  DesignLeft = 400
+  DesignTop = 200
+  object pnlBackground: TPanel
+    Left = 0
+    Height = 300
+    Top = 0
+    Width = 400
+    Align = alClient
+    BevelOuter = bvNone
+    ClientHeight = 300
+    ClientWidth = 400
+    Color = 1511693
+    ParentBackground = False
+    ParentColor = False
+    TabOrder = 0
+    object pbVectorCanvas: TPaintBox
+      Left = 8
+      Height = 284
+      Top = 8
+      Width = 384
+      Align = alClient
+      BorderSpacing.Around = 8
+      OnPaint = pbVectorCanvasPaint
+    end
+  end
+  object tmrAnimation: TTimer
+    Enabled = False
+    Interval = 33
+    OnTimer = tmrAnimationTimer
+    Left = 184
+    Top = 136
+  end
+end
